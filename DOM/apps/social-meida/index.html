@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Like Dislike System</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <div class="image-container">
+          <img
+            src="https://assets.promptbase.com/DALLE_IMAGES%2FQyoCIEAadSVXpsO0KGYsgzKu4lp2%2Fresized%2F1688409888663_w_800x800.webp?alt=media&token=e18085c6-e963-4145-9c60-7d398e7cadea"
+            alt="Image"
+          />
+        </div>
+        <div class="buttons">
+          <button id="likeBtn" class="btn" onclick="like()">
+            <i class="fa fa-thumbs-up"></i> <span id="likeCount"></span>
+          </button>
+          <button id="dislikeBtn" class="btn" onclick="dislike()">
+            <i class="fa fa-thumbs-down"></i> <span id="dislikeCount"></span>
+          </button>
+        </div>
+        <div class="total">Total: <span id="totalCount">0</span></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

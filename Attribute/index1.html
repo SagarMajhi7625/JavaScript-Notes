@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>New Tab</title>
+    <style>
+      .one {
+        color: blue;
+      }
+      .two {
+        background: yellow;
+      }
+      .three {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one two">
+      <p>Attribute Methods</p>
+    </div>
+    <script>
+      let divTag = document.querySelector("div");
+      console.log(divTag.getAttribute("class"));
+      //   divTag.setAttribute("class", "three");❌
+      divTag.classList.add("three");
+      divTag.classList.remove("two");
+      console.log(divTag.classList.contains("one"));
+    </script>
+  </body>
+</html>

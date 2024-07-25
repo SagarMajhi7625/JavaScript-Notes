@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Details</title>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/zephyr/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Student Portal</a>
+      </div>
+    </nav>
+
+    <section class="container-fluid mt-2">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
+        veritatis velit consequatur excepturi nam similique praesentium ratione,
+        ad atque pariatur expedita omnis at, fuga recusandae assumenda
+        consectetur ut accusamus aliquam. Nam eius laborum quasi distinctio
+        ducimus dolorum nihil nostrum expedita voluptatem tenetur animi eaque
+        eligendi ratione cupiditate vel sapiente magnam odit, minima beatae
+        culpa veniam voluptatibus quibusdam. Sint, ea libero?
+      </p>
+    </section>
+
+    <section class="container-fluid mt-2">
+      <div class="row mb-3">
+        <div class="col-md-12 d-flex justify-content-around text-center">
+          <button class="btn btn-primary" id="all-students">
+            All Students
+          </button>
+          <button class="btn btn-success" id="pass-students">
+            Pass Students
+          </button>
+          <button class="btn btn-danger" id="fail-students">
+            Fail Students
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-striped" id="student-table">
+            <thead>
+              <tr>
+                <th>SReg</th>
+                <th>SName</th>
+                <th>SMarks</th>
+                <th>SEmail</th>
+                <th>SAge</th>
+                <th>SPer</th>
+              </tr>
+            </thead>
+            <tbody id="student-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/yeti/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Amazon</a>
+      </div>
+    </nav>
+    <section class="container mt-3">
+      <div class="row">
+        <div class="col-md-5 m-auto">
+          <div class="card">
+            <div class="card-header bg-dark text-white">
+              <h2 class="text-center">Register Here</h2>
+            </div>
+            <div class="card-body">
+              <form id="reg-form">
+                <div class="form-group mb-2">
+                  <input
+                    type="text"
+                    placeholder="Enter Username"
+                    class="form-control"
+                    id="usn"
+                  />
+                </div>
+                <div class="form-group mb-2">
+                  <input
+                    type="email"
+                    placeholder="Enter Email"
+                    class="form-control"
+                    id="email"
+                  />
+                </div>
+                <div class="form-group mb-2">
+                  <input
+                    type="password"
+                    placeholder="Enter Password"
+                    class="form-control"
+                    id="pw"
+                  />
+                </div>
+                <div class="form-group mb-2">
+                  <input type="date" class="form-control" id="dob" />
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="">Select Gender</label>
+                  <div class="form-check">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      value="male"
+                      name="radio"
+                      id="male"
+                    />
+                    <label class="form-check-label" for="male">Male</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      value="female"
+                      name="radio"
+                      id="female"
+                    />
+                    <label class="form-check-label" for="female">Female</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      value="other"
+                      name="radio"
+                      id="other"
+                    />
+                    <label class="form-check-label" for="other">Other</label>
+                  </div>
+                </div>
+
+                <div class="form-group mb-2">
+                  <select name="" id="city" class="form-control">
+                    <option value="">Select city</option>
+                    <option value="BLR">Bangalore</option>
+                    <option value="CH">Chennai</option>
+                    <option value="HYD">Hyderabad</option>
+                  </select>
+                </div>
+                <div class="form-group mb-2">
+                  <input
+                    type="submit"
+                    value="Submit"
+                    class="btn btn-dark btn-sm"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>

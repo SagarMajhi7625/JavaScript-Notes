@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        background: yellow;
+        text-align: center;
+      }
+      h1 {
+        color: red;
+      }
+      button {
+        padding: 10px 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="display-text">Print Message</h1>
+      <br />
+      <button onclick="hiMsg();">Hi</button>
+      <button id="hello-btn">Hello</button>
+      <button id="bye-btn">Bye</button>
+    </div>
+    <script>
+      let displayTag = document.getElementById("display-text");
+
+      function hiMsg() {
+        displayTag.textContent = "Hi";
+      }
+      // Using Event Properties
+      let helloBtn = document.getElementById("hello-btn");
+      helloBtn.onclick = function () {
+        displayTag.textContent = "Hello";
+      };
+      // Using addEventListener()
+      let byeBtn = document.getElementById("bye-btn");
+      byeBtn.addEventListener(
+        "click",
+        function () {
+          displayTag.textContent = "Bye";
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

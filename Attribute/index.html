@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>New Tab</title>
+    <style>
+      #one {
+        color: blue;
+      }
+      .abc {
+        color: red;
+      }
+      #two {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div align="center" class="abc" id="one">
+      <p>Attribute Methods</p>
+    </div>
+    <script>
+      let divTag = document.querySelector("div");
+      console.log(divTag.hasAttribute("align"));
+      console.log(divTag.getAttribute("class"));
+      //   divTag.setAttribute("id", "two");
+      divTag.removeAttribute("class");
+    </script>
+  </body>
+</html>

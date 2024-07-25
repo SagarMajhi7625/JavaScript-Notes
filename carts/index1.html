@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      img {
+        width: 100% !important;
+        height: 200px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Amazon</a>
+      </div>
+    </nav>
+    <section class="container-fluid mt-3">
+      <div class="row">
+        <div class="col">
+          <h2>Cart Module:-</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            asperiores qui in labore culpa ratione laborum autem, perspiciatis
+            voluptatum unde a quaerat, quia beatae architecto soluta
+            consequuntur enim officiis quasi doloribus natus! Quia, quidem
+            necessitatibus obcaecati porro voluptatem blanditiis inventore nisi
+            quos dicta quisquam eligendi iure eos ullam ut! Optio enim doloribus
+            ab, magnam nisi atque eaque, ad nihil, adipisci fugit assumenda
+            officia eius culpa sed et dolorum veritatis quod.
+          </p>
+          <button class="btn btn-dark">Check Out</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-fluid mt-3">
+      <div class="row" id="display-products"></div>
+    </section>
+
+    <footer style="margin-bottom: 500px"></footer>
+    <script>
+      let item_1 = {
+        id: 101,
+        img: "https://images.samsung.com/is/image/samsung/p6pim/in/2401/gallery/in-galaxy-s24-492654-sm-s921bzycins-thumb-539572832?$264_264_PNG",
+        name: "Samsung Mobile",
+        price: 60000,
+        qty: 1,
+      };
+
+      let item_2 = {
+        id: 102,
+        img: "https://www.cnet.com/a/img/resize/acf94e6aea50ddd21a02628ed7735123adbc7dd4/hub/2012/11/30/733a4ce7-6797-11e3-846b-14feb5ca9861/ipod-classic-5262.jpg?auto=webp&width=768",
+        name: "Ipod",
+        price: 20000,
+        qty: 1,
+      };
+
+      let item_3 = {
+        id: 103,
+        img: "https://skinsy.in/wp-content/uploads/2022/03/Apple-iWatch-Series-3.png",
+        name: "Apple Watch",
+        price: 40000,
+        qty: 1,
+      };
+
+      let items = [item_1, item_2, item_3];
+
+      function displayProducts(products) {
+        if (products.length != 0) {
+          let eachProduct = "";
+          for (let item of products) {
+            eachProduct += `
+                <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                    <img src="${item.img}" alt="" class="img-fluid" />
+                    </div>
+                    <div class="card-body text-center">
+                    <h2>${item.name}</h2>
+                    <h4>${item.price} &#8377;</h4>
+                    <h5>
+                        <i class="bi bi-dash-circle" onclick="decQty(${item.id})"></i>
+                        <span>${item.qty}</span>
+                        <i class="bi bi-plus-circle" onclick="incQty(${item.id})"></i>
+                    </h5>
+                    </div>
+                </div>
+                </div>
+            `;
+          }
+          document.getElementById("display-products").innerHTML = eachProduct;
+        }
+      }
+
+      displayProducts(items);
+
+      function incQty(id) {
+        for (let i = 0; i < items.length; i++) {
+          if (items[i].id === id) {
+            items[i].qty++;
+            displayProducts(items);
+            break;
+          }
+        }
+      }
+
+      function decQty(id) {
+        for (let i = 0; i < items.length; i++) {
+          if (items[i].id === id && items[i].qty > 1) {
+            items[i].qty--;
+            displayProducts(items);
+            break;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="display"></div>
+    <script>
+      let displayTag = document.querySelector("#display");
+      let htmlCode = "<h1>Header One</h1>";
+      console.log(htmlCode, typeof htmlCode);
+      displayTag.textContent = htmlCode;
+      displayTag.innerText = htmlCode;
+      displayTag.innerHTML = htmlCode;
+    </script>
+  </body>
+</html>
